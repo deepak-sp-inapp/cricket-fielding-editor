@@ -35,50 +35,54 @@
         width: 950px;
         overflow: visible;
       }
+      .cursor-pointer {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h3>Cricket Field Editor</h3>
-          <h4>To rename players write them in the box.</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-9">
+    <div class="container vh-100">
+      <div class="row h-100">
+        <div class="col-lg-9 align-self-center">
           <div class="field" id="field">
             <div id="container"></div>
           </div>
         </div>
-        <div class="col-lg-3">
-          <button
-            type="button"
-            class="btn btn-lg btn-primary"
-            onclick="download();"
-          >
-            Download
-          </button>
-          <br />
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="pname"
-            onchange="hidepname();"
-            checked
-          />
-          <label class="form-check-label" for="pname">Show Player Names</label>
-          <br />
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="posname"
-            onchange="hideposname();"
-            checked
-          />
-          <label class="form-check-label" for="posname">Show Positions</label>
+        <div class="col-lg-3 align-self-center">
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-lg btn-primary"
+                onclick="download();"
+              >
+                Download
+              </button>
+            </div>
+            <div class="col">
+              <label class="form-check-label cursor-pointer" for="pname">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="pname"
+                  onchange="hidepname();"
+                  checked
+                />Player Names
+              </label>
+              <label class="form-check-label cursor-pointer" for="posname">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="posname"
+                  onchange="hideposname();"
+                  checked
+                />Positions
+              </label>
+            </div>
+          </div>
+          <hr />
           <div id="names"></div>
         </div>
       </div>
